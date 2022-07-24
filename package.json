@@ -1,0 +1,32 @@
+{
+  "name": "automated-screenshot-generator",
+  "version": "1.0.0",
+  "description": "automated screenshot generator",
+  "main": "generate-screenshots.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wfbobby/automated-screenshot-generator.git"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "puppeteer",
+    "automated",
+    "screenshot",
+    "generator"
+  ],
+  "author": "wfbobby",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wfbobby/automated-screenshot-generator/issues"
+  },
+  "homepage": "https://github.com/wfbobby/automated-screenshot-generator#readme",
+  "dependencies": {
+    "moca": "^0.4.3",
+    "puppeteer": "^15.5.0",
+    "puppeteer-cluster": "^0.23.0"
+  }
+}
