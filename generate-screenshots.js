@@ -9,11 +9,16 @@ const { Cluster } = require('puppeteer-cluster');
 
     // Define a task (in this case: screenshot of page)
     await cluster.task(async ({ page, data: url }) => {
+        
+        // page.setExtraHTTPHeaders({ referer: "https://www.google.com/search?client=chrome-b-1-d&q=search+term" })
+        
         await page.goto(url);
+        
         // await page.waitForTimeout(5000);
+        
         let path = url.replace(/^http[s]?\:\/\//g, '_');
         path = "screenshots/" + path.replace(/[^a-zA-Z]/g, '_') + '.png';
-        // path = path.replace(/^__/g,"");
+
         await page.screenshot({ path, fullPage: true });
         console.log(`Screenshot of ${url} saved: ${path}`);
     });
